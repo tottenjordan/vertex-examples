@@ -1,1 +1,0 @@
-FROM jupyter/base-notebook
