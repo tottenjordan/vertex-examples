@@ -1,0 +1,12 @@
+FROM tensorflow/tensorflow:latest-gpu-jupyter
+
+RUN apt-get update && \
+        apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN pip install jupyter -U && pip install jupyterlab
+
+ENV pwd=""
+
+EXPOSE 8080
+
+ENTRYPOINT exec jupyter-lab --ip=0.0.0.0 --port=8080 --no-browser --allow-root --NotebookApp.token="$pwd" --NotebookApp.password="$pwd" --ServerApp.allow_origin="*"
