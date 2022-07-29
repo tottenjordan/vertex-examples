@@ -1,4 +1,4 @@
-1. **comparing_pipeline_runs.ipynb**
+1. **comparing_locally_trained_models.ipynb**
 > * Create a Vertex Experiment and experiment run; log metrics and params
 > * Compare two locally trained models with `Experiments`
 
